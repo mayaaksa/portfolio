@@ -1,0 +1,10 @@
+MahasiswaBaru1 NIM991
+MahasiswaBaru2 NIM992
+MahasiswaBaru3 NIM993
+MahasiswaBaru4 NIM994
+MahasiswaBaru5 NIM995
+MahasiswaBaru6 NIM996
+MahasiswaBaru7 NIM997
+MahasiswaBaru8 NIM998
+MahasiswaBaru9 NIM999
+MahasiswaBaru10 NIM9910

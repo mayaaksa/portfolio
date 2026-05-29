@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">NPM</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Angkatan</th>
+                <th scope="col">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>22001</td>
+                <td>A</td>
+                <td rowspan="2" style="vertical-align: middle;">2022</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ya</button>
+                    <button type="button" class="btn btn-danger">Tidak</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>22002</td>
+                <td>B</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ya</button>
+                    <button type="button" class="btn btn-danger">Tidak</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>23001</td>
+                <td>C</td>
+                <td>2023</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ya</button>
+                    <button type="button" class="btn btn-danger">Tidak</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>24001</td>
+                <td>D</td>
+                <td rowspan="2" style="vertical-align: middle;">2024</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ya</button>
+                    <button type="button" class="btn btn-danger">Tidak</button>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>24002</td>
+                <td>E</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ya</button>
+                    <button type="button" class="btn btn-danger">Tidak</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

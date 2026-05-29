@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday!</title>
+
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to top, #87ceeb 60%, #fff 100%);
+    text-align: center;
+    color: white;
+  }
+
+  /* 🌇 Jalan */
+  .road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: #333;
+  }
+
+  .line {
+    position: absolute;
+    width: 200%;
+    height: 5px;
+    background: repeating-linear-gradient(
+      to right,
+      white 0px,
+      white 40px,
+      transparent 40px,
+      transparent 80px
+    );
+    top: 50%;
+    animation: moveRoad 2s linear infinite;
+  }
+
+  @keyframes moveRoad {
+    from {transform: translateX(0);}
+    to {transform: translateX(-200px);}
+  }
+
+  /* 🚗 Mobil */
+  .car {
+    position: absolute;
+    bottom: 120px;
+    left: -200px;
+    width: 150px;
+    height: 70px;
+    background: red;
+    border-radius: 10px;
+    animation: drive 6s linear infinite;
+  }
+
+  .car:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    bottom: -20px;
+    left: 15px;
+  }
+
+  .car:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    bottom: -20px;
+    right: 15px;
+  }
+
+  @keyframes drive {
+    from {left: -200px;}
+    to {left: 110%;}
+  }
+
+  /* 🎂 Card */
+  .card {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+  }
+
+  h1 {
+    font-size: 3em;
+    color: #ff3f6c;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ff6f91;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* 💖 Popup */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    color: red;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 2em;
+    transition: 0.4s;
+    z-index: 5;
+  }
+.popup-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .popup img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .popup-text {
+    text-align: left;
+  }
+
+  .popup-text h2 {
+    color: #ff3f6c;
+    margin-bottom: 10px;
+  }
+
+  .popup-text p {
+    color: #333;
+    font-size: 14px;
+  }
+
+    .popup img {
+    width: 40%;
+    left: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+
+  .popup.show {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Musik -->
+<audio id="music" loop>
+  <source src="superpowers.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+  <h1>Happy Birthday, Dapin❤️</h1>
+  <p>All the best buat pacarku! </p>
+  <button onclick="start()">Kartu Ucapan</button>
+</div>
+
+<div class="popup" id="popup">
+  <img src="WhatsApp Image 2026-04-15 at 22.04.42.jpeg">
+  <div class="popup-text">
+      <p>
+        Selamat ulang tahun yaa, sayang,  
+        Semoga kamu selalu seneng, sehat terus,  
+        dan semua yang diinginkan tercapai, 
+        dan bareng aku terus! ✨
+        Aamiin   
+      </p>
+    </div>
+</div>
+
+<!-- Jalan -->
+<div class="road">
+  <div class="line"></div>
+</div>
+
+<!-- Mobil -->
+<div class="car"></div>
+
+<script>
+function start() {
+  document.getElementById("music").play();
+  document.getElementById("popup").classList.add("show");
+}
+</script>
+
+</body>
+</html>
